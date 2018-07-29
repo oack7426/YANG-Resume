@@ -1,0 +1,557 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@import url(http://fonts.gstatic.com/ea/notosanstc/v1/OFL.txt);
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #404040;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*For IE 6&7 only*/
+}
+
+body {
+    background: url(../imgs/what-the-hex.png);
+    background-color: #e7e8e9;
+    /* background-color: rgb(209, 190, 187); */
+    background-blend-mode: multiply;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.main h2 {
+    font-size: 2em;
+}
+
+.small {
+    font-size: 0.9em;
+}
+
+.small_age {
+    font-size: 0.3em;
+    padding-left: 20px;
+}
+
+.main {
+    max-width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.main>div:not(.clearfix) {
+    margin: 30px auto;
+    margin-bottom: 90px;
+}
+
+.main h2 {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.nav {
+    height: 50px;
+    text-align: right;
+    letter-spacing: 3px;
+    padding-right: 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav li a {
+    display: block;
+    padding: 5px 20px;
+    color: rgb(216, 216, 216);
+    line-height: 40px;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imgs/tweed.png);
+    /* background-color: rgb(189, 192, 196); */
+    /* background-image: url(../imgs/what-the-hex.png); */
+    /* background-blend-mode: multiply; */
+}
+
+.business_card {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 900px;
+    height: 500px;
+    background: #fff;
+    /* background-image: url(../imgs/tweed.png); */
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.3);
+    /* background-image: url(../imgs/dust_scratches.png);
+    background-blend-mode: multiply; */
+}
+
+.business_card div {
+    float: left;
+}
+
+.my_photo {
+    width: 40%;
+    height: 100%;
+    background-image: url(../imgs/man_800x479.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.business_card_about {
+    height: 100%;
+    padding: 30px;
+}
+
+
+/* .business_card_about small,
+.business_card_about h1,
+.business_card_about h2,
+.business_card_about p {
+    color: rgb(206, 206, 206);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+
+
+}
+*/
+
+.business_card_about h1 {
+    margin-bottom: 50px;
+}
+
+.business_card_about h2 {
+    margin-top: 20px;
+}
+
+.business_card_about p {
+    padding: 20px;
+    line-height: 2;
+}
+
+.move {
+    text-align: center;
+    padding: 30px;
+    font-size: 2em;
+}
+
+
+/*上方名片設定*/
+
+.about_me {
+    max-width: 700px;
+}
+
+
+/*上方關於我設定*/
+
+.skill {
+    /* background: #000; */
+}
+
+.skill>div:not(.clearfix) {
+    width: 31%;
+    margin: 0 1%;
+    float: left;
+    padding: 20px 20px 40px 20px;
+    transition: all 0.3s;
+}
+
+.skill>div:not(.clearfix):hover {
+    background: #fff;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3,
+.skill p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.code_img,
+.draw_img,
+.other_img {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+
+/*上方專業技能設定*/
+
+.my_web ul li {
+    padding: 10px;
+    display: inline-block;
+    width: 47%;
+    margin: 0 1%;
+    background: #fff;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.my_web ul li:nth-child(1),
+.my_web ul li:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.my_web ul li img {
+    display: block;
+    float: left;
+    height: 150px;
+    border: 1px solid #7f7f81;
+}
+
+.my_web p {
+    max-width: 240px;
+    float: left;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.project {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project li:not(.roll-up_door) {
+    /* width: 50%; */
+    background: #fff;
+    padding: 25px;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.roll-up_door {
+    width: 100%;
+    min-height: 250px;
+    padding-bottom: 20px;
+    background: #fff;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.roll-up_door img {
+    height: 230px;
+    transition: all 0.5s;
+    display: block;
+    float: left;
+    border: 1px solid #7f7f81;
+}
+
+.roll-up_door div {
+    max-width: 400px;
+    display: inline-block;
+    /* float: left; */
+    padding: 20px;
+    padding-left: 20px;
+    /* height: auto; */
+}
+
+.brightness img:hover {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.project h3 {
+    /* margin: 25px 0; */
+}
+
+.roll-up_door h3,
+.roll-up_door p {
+    padding: 5px 25px;
+}
+
+
+/* .go_web {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    padding: 5px 25px;
+}
+
+.go_web:hover {
+    background: rgb(46, 46, 46);
+    color: #fff;
+} */
+
+footer {
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.liner {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 60px;
+    opacity: 0.4;
+}
+
+.top:hover {
+    opacity: 1;
+}
+
+@media(max-width:768px) {
+    header {
+        height: auto;
+    }
+    .business_card {
+        width: 70%;
+        height: auto;
+    }
+    .business_card div {
+        float: none;
+    }
+    .my_photo {
+        width: 100%;
+        height: 350px;
+    }
+    /* 上方名片設定 */
+    .skill>div:not(.clearfix) {
+        width: 70%;
+        margin: 0 auto;
+        float: none;
+    }
+    /* 上方專業技能設定 */
+    .my_web ul li {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .my_web ul li {
+        margin-bottom: 20px;
+    }
+    .my_web p {
+        min-width: 240px;
+        max-width: 100%;
+    }
+    .roll-up_door img {
+        width: 100%;
+        height: auto;
+        transition: all 0.5s;
+        display: block;
+        float: none;
+    }
+    .roll-up_door div {
+        max-width: 100%;
+    }
+    .go_web {
+        height: 44px;
+        line-height: 35px;
+    }
+}
+
+@media(max-width:375px) {
+    h1,
+    h2,
+    .main h2 {
+        font-size: 1.2em;
+    }
+    h3,
+    h4,
+    .project h3 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .business_card {
+        width: 90%;
+        height: auto;
+    }
+    .my_web ul li img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .main>div:not(.clearfix) {
+        margin: 25px auto;
+    }
+    .main h2 {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
