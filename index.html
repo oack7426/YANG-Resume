@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon shortcut" href="./imgs/icon.ico">
+    <link rel="stylesheet" href="./dist/animate.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/style.css">
-    <title>楊育榛作品集</title>
+    <title>YANG Resume</title>
 </head>
 
 <body>
     <header>
-        <ul class="nav">
-            <li><a href="#">名片</a></li>
-            <li><a href="#">關於我</a></li>
-            <li><a href="#">專業技能</a></li>
-            <li><a href="#">個人作品</a></li>
-            <li><a href="#">專案作品</a></li>
-        </ul>
-        <div class="business_card">
+        <div class="nav">
+            <ul>
+                <li><a href="#BusinessCard">名片</a></li>
+                <li><a href="#AboutMe">關於我</a></li>
+                <li><a href="#Skill_">專業技能</a></li>
+                <li><a href="#MyWeb">個人作品</a></li>
+                <li><a href="#Project">專案作品</a></li>
+            </ul>
+            <a href="#" class="showmenu"><i class="fas fa-align-right"></i></a>
+        </div>
+        <div class="business_card animated rollIn" id='BusinessCard'>
             <div class="my_photo"></div>
             <!-- TODO:換照片 -->
             <div class="business_card_about">
@@ -39,7 +44,7 @@
         <!-- TODO:icon動畫 -->
     </header>
     <div class="main">
-        <div class="about_me">
+        <div class="about_me" id='AboutMe'>
             <h2>關於我</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat recusandae cumque fugiat, corporis eos nihil esse provident? Quae minima voluptates quia voluptatum corrupti est obcaecati omnis molestias dolore nihil! Cumque eius quod repellendus,
                 nihil nulla voluptatem reprehenderit, ab molestias qui hic consectetur aliquid, fuga non fugit perspiciatis! Rem omnis culpa nesciunt deleniti maiores mollitia quos nam recusandae eos natus molestias, libero deserunt doloremque reprehenderit
@@ -47,14 +52,14 @@
                 fugit vitae culpa, sapiente quas! Eaque eius praesentium aliquam, provident deserunt magni sed, nobis adipisci ipsa vero illum mollitia, repellat in porro! Error, laboriosam! Facere veniam minus in, magnam beatae tempora labore, hic quam
                 reprehenderit maxime </p>
         </div>
-        <div class="skill">
+        <div class="skill" id='Skill_'>
             <h2>專業技能</h2>
             <div class="code">
                 <div class="code_img"><i class="fas fa-file-code"></i></div>
                 <h3>程式能力</h3>
                 <br>
                 <p>
-                    HTML+CSS 手刻RWD<br>使用過Boostrap3前端框架<br> 會使用jQuery<br>了解javascript陣列<br>
+                    HTML+CSS 手刻RWD<br>使用過Boostrap3前端框架<br> jQuery動畫效果<br>css grid排版<br>
                 </p>
                 <!-- TODO:記得程式這邊的描寫要改 -->
             </div>
@@ -63,7 +68,7 @@
                 <h3>設計能力</h3>
                 <br>
                 <p>
-                    sketch（設計工具）<br> zeplin(與工程師溝通協作工具) <br>axure（wireframe工具）<br> invision（prototype工具）
+                    sketch（設計工具）<br> zeplin(溝通協作工具) <br>axure（wireframe工具）<br> invision（prototype工具）
                 </p>
             </div>
             <div class="other">
@@ -77,75 +82,99 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="my_web">
+        <div class="my_web" id='MyWeb'>
             <h2>個人作品</h2>
             <ul class="brightness">
                 <li>
-                    <a href="https://oack7426.github.io/work1_grid/" target="_blank"><img src="./imgs/work1_grid.png" alt=""></a>
-                    <p>技術：css grid</p>
+                    <a href="https://oack7426.github.io/work1_grid/" target="_blank"><img src="./imgs/my_web/work1_grid.png" alt=""></a>
+                    <p>css grid</p>
                     <div class="clearfix"></div>
                 </li>
                 <li>
-                    <a href="https://oack7426.github.io/week6_miniFridge/" target="_blank"><img src="./imgs/form.png" alt=""></a>
-                    <p>技術：手刻RWD / 表單驗證 / jQuery</p>
+                    <a href="https://oack7426.github.io/week6_miniFridge/" target="_blank"><img src="./imgs/my_web/form.png" alt=""></a>
+                    <p>手刻RWD / 表單驗證 / jQuery</p>
                     <div class="clearfix"></div>
                 </li>
                 <li>
-                    <img src="./imgs/draw.jpg" alt="">
-                    <p>技術：手刻RWD / 表單驗證 / jQuery</p>
+                    <a href="https://oack7426.github.io/jquery_homework_20180711/" target="_blank"><img src="./imgs/my_web/jquery-dist.png" alt=""></a>
+                    <p>jQuery / 第三方套件燈箱&amp;輪播</p>
                     <div class="clearfix"></div>
                 </li>
                 <li>
-                    <img src="./imgs/draw.jpg" alt="">
-                    <p>技術：css grid</p>
+                    <img src="./imgs/building.jpg" alt="">
+                    <p>建站中</p>
                     <div class="clearfix"></div>
                 </li>
-            </ul>
-        </div>
-        <div class="project">
-            <h2>專案作品</h2>
-            <ul>
-                <li class="roll-up_door brightness">
-                    <a href="http://www.rd.com.tw/" target="_blank"><img src="./imgs/roll_door.png" alt=""></a>
-                    <div>
-                        <h3>安進捲門</h3>
-                        <p>捲門配色系統客製化，無需教學即可上手，讓經銷商可以快速製作捲門工業圖。<br><br>負責：wireframe頁面結構、功能、內容規劃 / prototype原型製作 / 繪製最終設計稿 / Html css切版（使用boostrap3）
-                        </p>
-                    </div>
-                    <!-- <a href="http://www.rd.com.tw/" class="go_web" target="beatae">前往網站&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a> -->
-                    <!-- TODO:icon顏色無法調整 -->
-                </li>
-                <!-- <div>
-                    <li>
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <h3>K-Force 手機充電app</h3>
-                        <p>負責：wireframe頁面結構、功能、內容規劃 / 繪製最終設計稿</p>
-                    </li>
-                    <li>
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <h3>閃電麥斯 汽車充電app</h3>
-                        <p>負責：wireframe頁面結構、功能、內容規劃 / 繪製最終設計稿</p>
-                    </li>
-                    <li>
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <img src="./imgs/K-Force/small/loading_small.png" alt="">
-                        <h3>經濟日報</h3>
-                        <p>負責：wireframe頁面結構、功能、內容規劃 / 繪製最終設計稿</p>
-                    </li>
-                    <div class="clearfix"></div>
-                </div> -->
                 <div class="clearfix"></div>
             </ul>
         </div>
-        <!-- </div> -->
+        <div class="project" id='Project'>
+            <h2>專案作品</h2>
+            <ul>
+                <li class="brightness">
+                    <a href="http://www.rd.com.tw/" target="_blank"><img src="./imgs/project/roll_door.png" alt=""></a>
+                    <div>
+                        <h3>安進捲門</h3>
+                        <br><br>
+                        <p>捲門配色系統客製化，無需教學即可上手，讓經銷商可以快速製作捲門工業圖。<br><br>負責：wireframe頁面結構、功能、內容規劃 / prototype原型製作 / 繪製最終設計稿 / Html css切版（使用boostrap3）
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="project_work slideshow-container">
+                <div class="mySlides1">
+                    <img src="./imgs/project/K-Force/k2.png">
+                </div>
+                <div class="mySlides1">
+                    <img src="./imgs/project/K-Force/k3.png">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                <h3>K-Force 手機充電app</h3>
+            </div>
+            <div class="project_work two slideshow-container">
+                <div class="mySlides2">
+                    <img src="./imgs/project/max/max1.png">
+                </div>
+                <div class="mySlides2">
+                    <img src="./imgs/project/max/max2.png">
+                </div>
+                <div class="mySlides2">
+                    <img src="./imgs/project/max/max3.png">
+                </div>
+                <div class="mySlides2">
+                    <img src="./imgs/project/max/max4.png">
+                </div>
+                <div class="mySlides2">
+                    <img src="./imgs/project/max/max5.png">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                <h3>閃電麥斯 汽車充電app</h3>
+            </div>
+            <div class="project_work three slideshow-container">
+                <div class="mySlides3">
+                    <img src="./imgs/project/economic_daily/one/a2.jpg">
+                </div>
+
+                <div class="mySlides3">
+                    <img src="./imgs/project/economic_daily/one/a3.jpg">
+                </div>
+                <div class="mySlides3">
+                    <img src="./imgs/project/economic_daily/one/a4.jpg">
+                </div>
+                <a class="prev prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next next" onclick="plusSlides(1, 2)">&#10095;</a>
+                <h3>經濟日報</h3>
+                <!-- TODO:固定高度 -->
+                <!-- TODO:所有該放的圖片要放好 -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
         <footer class="small">
             <div class="liner"></div>
             Copyright © 2018 YANG,YU-ZHEN
         </footer>
-
-
         <div class="top"><a href='#'><i class="fas fa-chevron-circle-up"></i></a></div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="./dist/all.js"></script>
