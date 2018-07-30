@@ -317,6 +317,11 @@ header {
     color: #fff;
 }
 
+.move {
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+}
+
 
 /*上方名片設定*/
 

@@ -44,3 +44,7 @@ $(document).ready(function() {
         $('.nav ul').toggleClass('block');
     });
 });
+
+
+AOS.init();
+//滾動控制器
