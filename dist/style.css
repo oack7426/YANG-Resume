@@ -139,7 +139,6 @@ table {
 @import url(http://fonts.gstatic.com/ea/notosanstc/v1/OFL.txt);
 * {
     font-family: 'Noto Sans TC', sans-serif;
-    color: #404040;
 }
 
 * {
@@ -221,6 +220,7 @@ h3 {
 }
 
 .nav {
+    width: 100%;
     height: 50px;
     text-align: right;
     letter-spacing: 3px;
@@ -233,19 +233,42 @@ h3 {
 }
 
 .nav li a {
+    height: 50px;
     display: block;
-    padding: 5px 20px;
+    padding: 0 20px;
     color: rgb(216, 216, 216);
-    line-height: 40px;
+    line-height: 47px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.nav li a:hover {
+    border-bottom: 3px solid;
+}
+
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    background-image: url(../imgs/tweed.png);
+    z-index: 999;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.showmenu {
+    display: none;
+}
+
+.showmenu svg {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 header {
     width: 100vw;
-    height: 100vh;
+    height: 680px;
+    /* height: 100vh; */
     background-image: url(../imgs/tweed.png);
-    /* background-color: rgb(189, 192, 196); */
-    /* background-image: url(../imgs/what-the-hex.png); */
-    /* background-blend-mode: multiply; */
+    /* TODO:記得高度要改回來 */
 }
 
 .business_card {
@@ -254,10 +277,7 @@ header {
     width: 900px;
     height: 500px;
     background: #fff;
-    /* background-image: url(../imgs/tweed.png); */
     box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.3);
-    /* background-image: url(../imgs/dust_scratches.png);
-    background-blend-mode: multiply; */
 }
 
 .business_card div {
@@ -267,7 +287,7 @@ header {
 .my_photo {
     width: 40%;
     height: 100%;
-    background-image: url(../imgs/man_800x479.jpg);
+    background-image: url(../imgs/my_photo.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -276,18 +296,6 @@ header {
     height: 100%;
     padding: 30px;
 }
-
-
-/* .business_card_about small,
-.business_card_about h1,
-.business_card_about h2,
-.business_card_about p {
-    color: rgb(206, 206, 206);
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
-
-
-}
-*/
 
 .business_card_about h1 {
     margin-bottom: 50px;
@@ -306,6 +314,7 @@ header {
     text-align: center;
     padding: 30px;
     font-size: 2em;
+    color: #fff;
 }
 
 
@@ -317,10 +326,6 @@ header {
 
 
 /*上方關於我設定*/
-
-.skill {
-    /* background: #000; */
-}
 
 .skill>div:not(.clearfix) {
     width: 31%;
@@ -354,49 +359,45 @@ header {
 
 /*上方專業技能設定*/
 
-.my_web ul li {
-    padding: 10px;
-    display: inline-block;
-    width: 47%;
-    margin: 0 1%;
-    background: #fff;
-    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s;
+.my_web {
+    padding: 20px 0 60px 0;
+    border: 1px solid #8d8d8d;
 }
 
-.my_web ul li:nth-child(1),
-.my_web ul li:nth-child(2) {
-    margin-bottom: 20px;
+.my_web ul li {
+    display: block;
+    float: left;
+    width: 20%;
+    margin: 0 2%;
+    transition: all 0.5s;
 }
 
 .my_web ul li img {
     display: block;
-    float: left;
+    /* float: left; */
     height: 150px;
     border: 1px solid #7f7f81;
 }
 
 .my_web p {
-    max-width: 240px;
-    float: left;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-top: 10px;
 }
 
 .project {
-    max-width: 900px;
     margin: 0 auto;
+    max-width: 900px;
 }
 
-.project li:not(.roll-up_door) {
-    /* width: 50%; */
-    background: #fff;
-    padding: 25px;
-    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+.project li {
+    max-width: 900px;
+    margin-bottom: 30px;
 }
 
-.roll-up_door {
-    width: 100%;
+.project ul {
+    margin-bottom: 100px;
+}
+
+.project li {
     min-height: 250px;
     padding-bottom: 20px;
     background: #fff;
@@ -404,49 +405,44 @@ header {
     padding: 10px;
 }
 
-.roll-up_door img {
+.project li img {
     height: 230px;
     transition: all 0.5s;
     display: block;
     float: left;
-    border: 1px solid #7f7f81;
 }
 
-.roll-up_door div {
-    max-width: 400px;
+.project li div {
+    max-width: 480px;
     display: inline-block;
-    /* float: left; */
     padding: 20px;
     padding-left: 20px;
-    /* height: auto; */
+}
+
+.design {
+    background: #fff;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.design li {
+    height: 300px;
+    width: 25%;
+    margin: none;
+    background: none;
+    box-shadow: none;
+    float: left;
+}
+
+.design li img {
+    padding-left: 15px;
+    border: none;
+    float: none;
 }
 
 .brightness img:hover {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
 }
-
-.project h3 {
-    /* margin: 25px 0; */
-}
-
-.roll-up_door h3,
-.roll-up_door p {
-    padding: 5px 25px;
-}
-
-
-/* .go_web {
-    display: block;
-    margin-top: 10px;
-    text-align: right;
-    padding: 5px 25px;
-}
-
-.go_web:hover {
-    background: rgb(46, 46, 46);
-    color: #fff;
-} */
 
 footer {
     margin-bottom: 30px;
@@ -470,13 +466,139 @@ footer {
     opacity: 0.4;
 }
 
+.top svg {
+    color: #000;
+}
+
 .top:hover {
     opacity: 1;
+}
+
+
+/* Slideshow container */
+
+
+/* 輪播設定 */
+
+.mySlides1,
+.mySlides2 {
+    display: none
+}
+
+.mySlides1 img,
+.mySlides2 img,
+.mySlides3 img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.mySlides3 {
+    height: 444px;
+    overflow: hidden;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.project_work {
+    width: 30%;
+    float: left;
+    background: #fff;
+    padding: 10px;
+}
+
+.project_work h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.project_work.two {
+    margin: 0 5%;
+}
+
+.project_work.three {
+    height: 523px;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    color: #fff;
+    background: #000;
+    opacity: 0.3;
 }
 
 @media(max-width:768px) {
     header {
         height: auto;
+    }
+    .showmenu {
+        display: block;
+    }
+    .nav {
+        padding: 0 20px;
+        position: relative;
+        /* transition: all 2.3s; */
+    }
+    .nav ul {
+        max-height: 0;
+        overflow: hidden;
+        z-index: 50;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        left: 0;
+        background: url(../imgs/tweed.png);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .nav ul.block {
+        max-height: 1000px;
+    }
+    .nav li {
+        display: block;
+        width: 100%;
     }
     .business_card {
         width: 70%;
@@ -503,24 +625,34 @@ footer {
     }
     .my_web ul li {
         margin-bottom: 20px;
-    }
-    .my_web p {
-        min-width: 240px;
-        max-width: 100%;
-    }
-    .roll-up_door img {
-        width: 100%;
-        height: auto;
-        transition: all 0.5s;
-        display: block;
         float: none;
     }
-    .roll-up_door div {
-        max-width: 100%;
+    .my_web ul li img {
+        margin-left: 20px;
+        float: left;
+    }
+    .my_web p {
+        padding-left: 20px;
+        display: inline-block;
+    }
+    .project li img {
+        width: 100%;
+        height: auto;
     }
     .go_web {
         height: 44px;
         line-height: 35px;
+    }
+    .project_work.two {
+        margin: 0;
+    }
+    .project_work {
+        width: 44%;
+        margin: 0 4%;
+        margin-bottom: 20px;
+    }
+    .project_work.two img {
+        height: auto;
     }
 }
 
@@ -542,8 +674,12 @@ footer {
         width: 90%;
         height: auto;
     }
+    .my_web {
+        padding: 0 10px;
+    }
     .my_web ul li img {
         width: 100%;
+        margin: 0;
         height: auto;
         display: block;
     }
@@ -553,5 +689,15 @@ footer {
     .main h2 {
         text-align: center;
         padding: 10px 0;
+    }
+    .project_work.two {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .project_work {
+        width: 70%;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
