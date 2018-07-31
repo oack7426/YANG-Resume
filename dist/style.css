@@ -139,9 +139,6 @@ table {
 @import url(http://fonts.gstatic.com/ea/notosanstc/v1/OFL.txt);
 * {
     font-family: 'Noto Sans TC', sans-serif;
-}
-
-* {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -159,13 +156,11 @@ table {
 
 .clearfix {
     *zoom: 1;
-    /*For IE 6&7 only*/
 }
 
 body {
     background: url(../imgs/what-the-hex.png);
     background-color: #e7e8e9;
-    /* background-color: rgb(209, 190, 187); */
     background-blend-mode: multiply;
 }
 
@@ -209,7 +204,10 @@ h3 {
     margin: 0 auto;
 }
 
-.main>div:not(.clearfix) {
+.main>.about_me,
+.skill,
+.my_web,
+.project {
     margin: 30px auto;
     margin-bottom: 90px;
 }
@@ -220,7 +218,6 @@ h3 {
 }
 
 .nav {
-    width: 100%;
     height: 50px;
     text-align: right;
     letter-spacing: 3px;
@@ -248,6 +245,8 @@ h3 {
 .nav.fixed {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     background-image: url(../imgs/tweed.png);
     z-index: 999;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -265,10 +264,8 @@ h3 {
 
 header {
     width: 100vw;
-    height: 680px;
-    /* height: 100vh; */
+    height: 100vh;
     background-image: url(../imgs/tweed.png);
-    /* TODO:記得高度要改回來 */
 }
 
 .business_card {
@@ -322,15 +319,13 @@ header {
     animation: pulse 2s infinite;
 }
 
-
-/*上方名片設定*/
-
 .about_me {
     max-width: 700px;
 }
 
-
-/*上方關於我設定*/
+.about_me p {
+    line-height: 2;
+}
 
 .skill>div:not(.clearfix) {
     width: 31%;
@@ -361,9 +356,6 @@ header {
     margin: 0 auto;
 }
 
-
-/*上方專業技能設定*/
-
 .my_web {
     padding: 20px 0 60px 0;
     border: 1px solid #8d8d8d;
@@ -379,7 +371,6 @@ header {
 
 .my_web ul li img {
     display: block;
-    /* float: left; */
     height: 150px;
     border: 1px solid #7f7f81;
 }
@@ -389,7 +380,6 @@ header {
 }
 
 .project {
-    margin: 0 auto;
     max-width: 900px;
 }
 
@@ -479,12 +469,6 @@ footer {
     opacity: 1;
 }
 
-
-/* Slideshow container */
-
-
-/* 輪播設定 */
-
 .mySlides1,
 .mySlides2 {
     display: none
@@ -502,17 +486,11 @@ footer {
     overflow: hidden;
 }
 
-
-/* Slideshow container */
-
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
-
-
-/* Next & previous buttons */
 
 .prev,
 .next {
@@ -530,16 +508,10 @@ footer {
     user-select: none;
 }
 
-
-/* Position the "next button" to the right */
-
 .next {
     right: 10px;
     border-radius: 3px 0 0 3px;
 }
-
-
-/* On hover, add a grey background color */
 
 .prev:hover,
 .next:hover {
@@ -585,7 +557,7 @@ footer {
     .nav {
         padding: 0 20px;
         position: relative;
-        /* transition: all 2.3s; */
+        transition: all 2.3s;
     }
     .nav ul {
         max-height: 0;
@@ -616,13 +588,11 @@ footer {
         width: 100%;
         height: 350px;
     }
-    /* 上方名片設定 */
     .skill>div:not(.clearfix) {
         width: 70%;
         margin: 0 auto;
         float: none;
     }
-    /* 上方專業技能設定 */
     .my_web ul li {
         display: block;
         width: 100%;

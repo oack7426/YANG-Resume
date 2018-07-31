@@ -2,9 +2,8 @@ $('.top a').click(function(event) {
     event.preventDefault();
     $('html,body').animate({ scrollTop: 0 });
 });
-//回到頂點
+
 var slideIndex = [1, 1, 1];
-/* Class the members of each slideshow group with different CSS classes */
 var slideId = ["mySlides1", "mySlides2", "mySlides3"]
 showSlides(1, 0);
 showSlides(1, 1);
@@ -28,17 +27,6 @@ function showSlides(n, no) {
 
 //
 $(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > $('header').offset().top) {
-            $('.nav').addClass('fixed');
-        } else {
-            $('.nav').removeClass('fixed');
-        }
-        // $(window).scrollTop() >= $('.skill').offset().top {
-        //     $('.skill').fadOut();
-        // }
-    });
-    //menu固定上方
     $('.showmenu').click(function() {
         event.preventDefault();
         $('.nav ul').toggleClass('block');
@@ -47,4 +35,3 @@ $(document).ready(function() {
 
 
 AOS.init();
-//滾動控制器
