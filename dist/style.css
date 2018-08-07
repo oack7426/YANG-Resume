@@ -357,16 +357,16 @@ header {
 }
 
 .my_web {
-    padding: 20px 0 60px 0;
+    padding: 20px 0 40px 0;
     border: 1px solid #8d8d8d;
 }
 
 .my_web ul li {
     display: block;
     float: left;
-    width: 20%;
-    margin: 0 2%;
+    margin: 0 1.5%;
     transition: all 0.5s;
+    padding-bottom: 40px;
 }
 
 .my_web ul li img {
